@@ -68,3 +68,9 @@ npm start
 | '/users/:userId' | Update entire User data by ID | userId as req.userId and User object payload | PUT    |
 | '/users/:userId' | Patch User data by ID         | userId as req.userId and update payload      | PATCH  |
 | '/users/:userId' | Delete User by ID             | userId as req.userId                         | DELETE |
+
+---
+
+**Use link below to Import Postman Collection**
+
+[API Postman Collection](https://documenter.getpostman.com/view/5533777/Tzeah5Xd/)
