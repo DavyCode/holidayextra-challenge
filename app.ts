@@ -44,7 +44,9 @@ routes.push(new UsersRoutes(app));
 routes.push(new AuthRoutes(app));
 
 app.get('/', (req: express.Request, res: express.Response) => {
-  res.status(200).send(`Server running at http://localhost:${port}`);
+  res
+    .status(200)
+    .json({ message: `Server running at http://localhost:${port}` });
 });
 
 export default server.listen(port, () => {

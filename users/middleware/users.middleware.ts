@@ -45,7 +45,7 @@ class UsersMiddleware {
   ): Promise<void> {
     const user: User = await userService.getUserByEmail(req.body.email);
 
-    if (user && user._id === req.params.userId) {
+    if (user && user._id.toString() === req.params.userId) {
       res.locals.user = user;
       next();
     } else {

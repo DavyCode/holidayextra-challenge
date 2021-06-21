@@ -15,10 +15,10 @@ class AuthController {
       const token = jwt.sign(req.body, jwtSecret, {
         expiresIn: tokenExpirationInSeconds,
       });
-      return res.status(201).send({ accessToken: token });
+      return res.status(201).json({ accessToken: token });
     } catch (err) {
       log('createJWT error: %O', err);
-      return res.status(500).send();
+      return res.status(500).json({ message: err.message });
     }
   }
 }
